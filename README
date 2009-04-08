@@ -1,4 +1,4 @@
-(This is an Iridesco modified version of openhood's PayPal plugin. Stripped down and adjusted for our needs.)
+(This is an Iridesco modified version of openhood's/leetsoft.com PayPal plugin. Stripped down and adjusted for our needs.)
 
 == Welcome to Paypal/ruby
 
@@ -6,26 +6,21 @@ This library is here to aid with integrating Paypal payments into ruby on rails
 applications or similar. To set this up you will need to log into your paypal 
 business account and tell paypal where to send the IPN ( Instant payment notifications ). 
 
-== Download
-
-* Preferred method of installation is using rubygems. gem install paypal --source http://dist.leetsoft.com
-* Alternatively you can get the library packaged at http://dist.leetsoft.com/pkg/
-
 == Requirements
 
 * Ruby 1.8.2 (may work with previous versions) With OpenSSL support compiled in. 
 * Valid paypal business account. 
-* (optional) The money library from http://dist.leetsoft.com/api/money 
 
 == Installation 
 
-1) Install the plugin using ./script/plugin install svn://vault.jadedpixel.com/paypal/trunk/paypal
+1) Install the plugin using ./script/plugin install git://github.com/iridesco/paypal.git
 
 
 2) Create a paypal_ipn ( or similar ) action like the one in the "Example rails controller" appendix. 
 
 Within the new payment controller you can now create pages from which users can be sent to paypal. You always 
-have to sent users to paypal using a HTTP Post so a standard link won't work (well OK but you need some javascript for that). The +Paypal::Helper+ namespace has some examples of how such a forward page may look. 
+have to sent users to paypal using a HTTP Post so a standard link won't work (well OK but you need some javascript for that). 
+The +Paypal::Helper+ namespace has some examples of how such a forward page may look. 
 
 == Testing the integration
 
